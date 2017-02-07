@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WebViewTest"
+             Title="P-WORLDアプリみたいな"
              x:Class="WebViewTest.MainPage">
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness"
     iOS="0,20,0,0" />
   </ContentPage.Padding>
+  <ContentPage.ToolbarItems>
+  <ToolbarItem Text="TOP"
+Clicked="Handle_Clicked" />
+  <ToolbarItem Text="MAP"
+Clicked="OnMapApp" />
+    </ContentPage.ToolbarItems>
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="1*" />

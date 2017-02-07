@@ -18,6 +18,14 @@ namespace WebViewTest
         {
             this.wv1.Source = "http://www.p-world.co.jp/sp";
         }
+
+        private void Handle_Clicked(object sender, System.EventArgs e)
+        {
+
+            this.wv1.Source = "http://www.p-world.co.jp/sp";
+        }
+
+
         private void OnMapApp(object sender, System.EventArgs e)
         {
             if (Device.OS == TargetPlatform.iOS)
@@ -26,7 +34,7 @@ namespace WebViewTest
             }
             else if (Device.OS == TargetPlatform.Android)
             {
-                Device.OpenUri(new Uri("geo:0,0?q=Tokyo"));
+                Device.OpenUri(new Uri("geo:0,0?q=gunma"));
             }
         }
 
