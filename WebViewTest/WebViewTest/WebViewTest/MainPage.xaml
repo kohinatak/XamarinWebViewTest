@@ -3,9 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WebViewTest"
              x:Class="WebViewTest.MainPage">
-
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
-
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+    iOS="0,20,0,0" />
+  </ContentPage.Padding>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="10*"/>
+      <RowDefinition Height="1*"/>
+    </Grid.RowDefinitions>
+    <Label Text="WebViewのテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+    <WebView x:Name="wv1" Source="http://www.p-world.co.jp/sp" Grid.Row="1"/>
+    <Grid Grid.Row="2">
+      <Grid.RowDefinitions>
+        <RowDefinition />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="1*" />
+       </Grid.ColumnDefinitions>
+      <Button x:Name="button1" Clicked="OnTop" Grid.Column="0" Text="To TOP" />
+      <Button x:Name="button2" Clicked="OnMapApp" Grid.Column="2" Text="MAPアプリを起動" />
+    </Grid>
+  </Grid>
 </ContentPage>
