@@ -16,12 +16,15 @@ Clicked="OnMapApp" />
     </ContentPage.ToolbarItems>
   <ContentPage Title="TOP">
       <Grid>
+        <Grid.GestureRecognizers>
+          <PinchGestureRecognizer PinchUpdated="Handle_PinchUpdated" />
+        </Grid.GestureRecognizers>
     <Grid.RowDefinitions>
       <RowDefinition Height="1*" />
       <RowDefinition Height="10*"/>
       <RowDefinition Height="1*"/>
     </Grid.RowDefinitions>
-    <Label Text="WebViewのテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+    <Label x:Name="labelStatus" Text="WebViewのテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
     <WebView x:Name="wv1" Source="http://www.p-world.co.jp/sp" Grid.Row="1"/>
     <Grid Grid.Row="2">
       <Grid.RowDefinitions>

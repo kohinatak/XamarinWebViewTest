@@ -13,7 +13,8 @@ namespace WebViewTest
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new WebViewTest.MainPage();
+            //            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

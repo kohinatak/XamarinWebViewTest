@@ -38,5 +38,10 @@ namespace WebViewTest
             }
         }
 
+        private void Handle_PinchUpdated(object sender, PinchGestureUpdatedEventArgs e)
+        {
+            this.labelStatus.Text = $"{e.Status}: {e.Scale}: ({e.ScaleOrigin.X}, {e.ScaleOrigin.Y})";
+        }
+
     }
 }
