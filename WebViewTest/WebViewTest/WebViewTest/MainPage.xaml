@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WebViewTest"
              Title="P-WORLDアプリみたいな"
@@ -14,7 +14,8 @@ Clicked="Handle_Clicked" />
   <ToolbarItem Text="MAP"
 Clicked="OnMapApp" />
     </ContentPage.ToolbarItems>
-  <Grid>
+  <ContentPage Title="TOP">
+      <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="1*" />
       <RowDefinition Height="10*"/>
@@ -35,4 +36,14 @@ Clicked="OnMapApp" />
       <Button x:Name="button2" Clicked="OnMapApp" Grid.Column="2" Text="MAPアプリを起動" />
     </Grid>
   </Grid>
-</ContentPage>
+  </ContentPage>
+  <ContentPage Title="MAP">
+    <Label Text="MAPのテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+  </ContentPage>
+  <ContentPage Title="機種情報">
+    <Label Text="機種情報のテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+  </ContentPage>
+  <ContentPage Title="掲示板">
+    <Label Text="掲示板のテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+  </ContentPage>
+</TabbedPage>
