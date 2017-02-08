@@ -25,7 +25,7 @@ Clicked="OnMapApp" />
       <RowDefinition Height="1*"/>
     </Grid.RowDefinitions>
     <Label x:Name="labelStatus" Text="WebViewのテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-    <WebView x:Name="wv1" Source="http://www.p-world.co.jp/sp" Grid.Row="1"/>
+    <WebView x:Name="wv1" Source="http://www.p-world.co.jp/sp" Grid.Row="1" Rotation="0" RotationX="0" RotationY="0"/>
     <Grid Grid.Row="2">
       <Grid.RowDefinitions>
         <RowDefinition />
@@ -36,6 +36,7 @@ Clicked="OnMapApp" />
         <ColumnDefinition Width="1*" />
        </Grid.ColumnDefinitions>
       <Button x:Name="button1" Clicked="OnTop" Grid.Column="0" Text="To TOP" />
+      <Button x:Name="button3" Clicked="Handle_Appearing" Grid.Column="1" Text="Anime" />
       <Button x:Name="button2" Clicked="OnMapApp" Grid.Column="2" Text="MAPアプリを起動" />
     </Grid>
   </Grid>

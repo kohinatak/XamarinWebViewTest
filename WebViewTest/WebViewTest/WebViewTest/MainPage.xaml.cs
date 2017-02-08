@@ -43,5 +43,23 @@ namespace WebViewTest
             this.labelStatus.Text = $"{e.Status}: {e.Scale}: ({e.ScaleOrigin.X}, {e.ScaleOrigin.Y})";
         }
 
+        private async void Handle_Appearing(object sender, EventArgs e)
+        {
+            await this.wv1.RotateYTo(450,1000);
+            await this.labelStatus.TranslateTo(100, 100);
+            await Task.WhenAll<bool>(
+            this.labelStatus.RotateTo(1000, 1000),
+            this.labelStatus.RotateXTo(800, 1000),
+            this.labelStatus.RotateYTo(500, 1000));
+            await this.labelStatus.RotateTo(0, 1000);
+            await this.labelStatus.RotateXTo(0, 1000);
+            await this.labelStatus.RotateYTo(0, 1000);
+
+
+            await this.labelStatus.TranslateTo(0, 0,5000, Easing.BounceOut);
+            await this.wv1.RotateYTo(0, 10000, Easing.SpringOut);
+
+        }
+
     }
 }
