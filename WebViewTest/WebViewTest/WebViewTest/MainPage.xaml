@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WebViewTest"
              Title="P-WORLDアプリみたいな"
@@ -46,4 +46,4 @@ Clicked="OnMapApp" />
   <ContentPage Title="掲示板">
     <Label Text="掲示板のテスト" Grid.Row="0" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
   </ContentPage>
-</TabbedPage>
+</CarouselPage>

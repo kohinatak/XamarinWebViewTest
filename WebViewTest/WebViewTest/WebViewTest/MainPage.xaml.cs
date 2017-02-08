@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace WebViewTest
 {
-    public partial class MainPage : TabbedPage
+    public partial class MainPage : CarouselPage
     {
         public MainPage()
         {
