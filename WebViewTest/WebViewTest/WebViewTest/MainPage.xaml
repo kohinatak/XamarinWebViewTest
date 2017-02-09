@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:WebViewTest"
              x:Class="WebViewTest.MainPage">
+  <StackLayout>
 
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
+  <Entry x:Name="Entry1"
+        WidthRequest="200"
+         Placeholder="name@server">
+    <Entry.Behaviors>
+      <local:ChkEmailBehavior />
+    </Entry.Behaviors>
 
+  </Entry>
+
+  <Button x:Name="Button1"
+          Text="Send"
+          IsEnabled ="{Binding IsValid,Source=local:ChkEmailBehavior}" />
+  </StackLayout>
 </ContentPage>
